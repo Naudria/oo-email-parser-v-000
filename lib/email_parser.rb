@@ -11,6 +11,8 @@ class EmailParser
 
   def parse
     arr = emails.split(/[\,\s]/)
+    arr.delete_if{|x| x == ""}
+    arr.uniq
   end
 
 end
